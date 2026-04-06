@@ -11,6 +11,6 @@ module RequestForgeryProtection
     end
 
     def allowed_api_request?
-      sec_fetch_site_value.nil? && request.format.json?
+      sec_fetch_site_value.in?([ nil, "none" ]) && request.format.json?
     end
 end

@@ -4,6 +4,8 @@ git_source(:bc) { |repo| "https://github.com/basecamp/#{repo}" }
 
 gem "rails", github: "rails/rails", branch: "main"
 
+gem "vault-reader", path: "../vault-reader"
+
 # Assets & front end
 gem "importmap-rails"
 gem "propshaft"

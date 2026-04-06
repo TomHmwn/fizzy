@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   root "events#index"
 
+  namespace :vault do
+    resource :sync, only: :create
+  end
+
   namespace :account do
     resource :cancellation, only: [ :create ]
     resource :entropy
